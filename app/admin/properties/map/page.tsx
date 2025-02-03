@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input'
 import { MapPin, Bed, Bath, Maximize, MoreHorizontal } from 'lucide-react'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import { cn } from '@/lib/utils'
 
 // Dynamically import the map component to avoid SSR issues
 const Map = dynamic(() => import('@/components/map'), { ssr: false })

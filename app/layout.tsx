@@ -1,7 +1,6 @@
 import { initEmailJS } from '@/lib/email';
 import { libreFranklin, jetbrainsMono, poppins } from './fonts'
 import './globals.css'
-// import { initEmailJS } from '../lib/emailjs'
 
 export const metadata = {
   title: 'Modia Properties & Consultancy',

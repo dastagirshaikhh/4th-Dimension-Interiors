@@ -7,6 +7,39 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
+// const properties: Property[] = [
+//     {
+//         id: '1',
+//         title: 'Modern Apartment in Lagos',
+//         price: 'NGN 1.5M',
+//         location: 'Airport Road, Lagos',
+//         image: 'https://cdn.prod.website-files.com/620ec747459e13c7cf12a39e/625b10a58137b364b18df2ea_iStock-94179607.jpg',
+//         bedrooms: 2,
+//         bathrooms: 2,
+//         area: 1200,
+//     },
+//     {
+//         id: '2',
+//         title: 'Luxury Villa in Victoria Island',
+//         price: 'NGN 2.8M',
+//         location: 'Victoria Island, Lagos',
+//         image: 'https://photos.zillowstatic.com/fp/0a7b03240f3206b7d1ad647134d4da5b-cc_ft_960.jpg',
+//         bedrooms: 4,
+//         bathrooms: 3,
+//         area: 2500,
+//     },
+//     {
+//         id: '3',
+//         title: 'Cozy Apartment in Lekki',
+//         price: 'NGN 3.2M',
+//         location: 'Lekki, Lagos',
+//         image: 'https://photos.zillowstatic.com/fp/e2fb240f45cad639deb7bc0f7fbea48f-cc_ft_960.jpg',
+//         bedrooms: 3,
+//         bathrooms: 2,
+//         area: 1800,
+//     },
+// ]
+
 const properties: Property[] = [
     {
         id: '1',
@@ -17,6 +50,8 @@ const properties: Property[] = [
         bedrooms: 2,
         bathrooms: 2,
         area: 1200,
+        type: 'Apartment', // Add this
+        createdAt: new Date().toISOString(), // Add this
     },
     {
         id: '2',
@@ -27,6 +62,8 @@ const properties: Property[] = [
         bedrooms: 4,
         bathrooms: 3,
         area: 2500,
+        type: 'Villa', // Add this
+        createdAt: new Date().toISOString(), // Add this
     },
     {
         id: '3',
@@ -37,8 +74,11 @@ const properties: Property[] = [
         bedrooms: 3,
         bathrooms: 2,
         area: 1800,
+        type: 'Apartment', // Add this
+        createdAt: new Date().toISOString(), // Add this
     },
 ]
+
 
 export default function Properties() {
     const { ref, inView } = useInView({

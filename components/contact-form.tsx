@@ -8,7 +8,8 @@ import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/hooks/use-toast"
+// import { useToast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -25,11 +26,11 @@ export default function ContactForm() {
         handleSubmit,
         formState: { errors },
         reset,
-    } = useForm({
+    } = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
     })
 
-    const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    const onSubmit = async () => {
         setIsSubmitting(true)
         // Simulate API call
         await new Promise((resolve) => setTimeout(resolve, 1000))

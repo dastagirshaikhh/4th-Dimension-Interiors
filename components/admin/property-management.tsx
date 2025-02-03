@@ -18,7 +18,7 @@ import {
 import type { Property } from "@/types"
 import PropertyForm from "./property-form"
 import { deleteProperty, togglePropertyStatus, getProperties } from "@/app/actions/properties"
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/hooks/use-toast"
 
 export default function PropertyManagement() {
     const [searchTerm, setSearchTerm] = useState("")
