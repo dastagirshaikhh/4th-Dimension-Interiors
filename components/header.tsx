@@ -29,7 +29,7 @@ export default function Header() {
                     <Link href="/" className="relative w-32 h-10">
                         <Image
                             src="/placeholder.svg"
-                            alt="Modia Properties"
+                            alt="4th Dimension Interior Designers"
                             fill
                             className="object-contain"
                             priority

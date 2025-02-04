@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-// import { useToast } from "@/components/ui/use-toast"
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -67,7 +66,7 @@ export default function ContactForm() {
                     <Textarea {...register("message")} placeholder="Your Message" className="w-full" rows={4} />
                     {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
                 </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-[#3D0C11] hover:bg-[#3D0C11]/90" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
             </form>

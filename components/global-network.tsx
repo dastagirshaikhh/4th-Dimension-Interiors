@@ -1,18 +1,18 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 import { libreFranklin, poppins } from '@/app/fonts'
 
 const cities = [
-    { name: 'Lagos', x: '10%', y: '60%' },
-    { name: 'London', x: '45%', y: '30%' },
-    { name: 'New York', x: '25%', y: '40%' },
-    { name: 'Dubai', x: '65%', y: '50%' },
-    { name: 'Tokyo', x: '85%', y: '45%' },
+    { name: 'Mumbai', x: '10%', y: '60%' },
+    { name: 'Navi Mumbai', x: '45%', y: '30%' },
+    { name: 'Kolkata', x: '25%', y: '40%' },
+    { name: 'Moscow', x: '65%', y: '50%' },
+    { name: 'New Delhi', x: '85%', y: '45%' },
 ]
 
 export default function GlobalNetwork() {
@@ -48,7 +48,7 @@ export default function GlobalNetwork() {
                             visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.6 } },
                         }}
                     >
-                        Global Property Network
+                        Global Interior Design Network
                     </motion.h2>
                     <motion.p
                         className="text-white/90 text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
@@ -57,9 +57,7 @@ export default function GlobalNetwork() {
                             visible: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.6 } },
                         }}
                     >
-                        Modia Properties is revolutionizing real estate, starting in Nigeria and expanding globally.
-                        We connect property owners, buyers, and renters through an innovative platform designed for
-                        seamless, secure, and efficient transactions.
+                        4th Dimension Interiors is bringing design visions to life, starting in Mumbai and expanding globally. We connect homeowners with talented designers and artisans through an innovative platform designed for seamless project management and exceptional interiors.
                     </motion.p>
                     <motion.div
                         variants={{

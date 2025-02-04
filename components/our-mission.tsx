@@ -8,7 +8,7 @@ const missions = [
     {
         icon: Home,
         title: "Exceptional Properties",
-        description: "We curate a portfolio of the most prestigious and unique properties in Nigeria.",
+        description: "We curate a portfolio of the most prestigious and unique interior designs in Mumbai.",
     },
     {
         icon: Users,
@@ -18,7 +18,7 @@ const missions = [
     {
         icon: TrendingUp,
         title: "Market Expertise",
-        description: "We leverage deep market insights to help our clients make informed real estate decisions.",
+        description: "We leverage deep design insights to help our clients create inspired spaces.",
     },
 ]
 

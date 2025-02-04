@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Admin Dashboard | Modia Properties',
+    title: 'Admin Dashboard | 4th Dimension Interiors Properties',
     description: 'Manage your properties and listings',
 }
 

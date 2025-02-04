@@ -18,11 +18,11 @@ export default function ContactInfo() {
                     <div>
                         <h3 className="font-semibold mb-1">Address</h3>
                         <p className="text-gray-600">
-                            No 2 Michika street off Ahmadu Bello way
+                            Kharghar Navi Mumbai,
                             <br />
-                            Area 11 Garki, Abuja
+                            Navi Mumbai (New Mumbai),
                             <br />
-                            Nigeria
+                            India 410210
                         </p>
                     </div>
                 </div>
@@ -30,15 +30,15 @@ export default function ContactInfo() {
                     <Phone className="w-6 h-6 text-[#3D0C11] mr-4" />
                     <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-gray-600">+234 803 974 3274</p>
-                        <p className="text-gray-600">+234 813 538 9424</p>
+                        <p className="text-gray-600">+91 123 456 789</p>
+                        <p className="text-gray-600">+91 123 456 789</p>
                     </div>
                 </div>
                 <div className="flex items-center">
                     <Mail className="w-6 h-6 text-[#3D0C11] mr-4" />
                     <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-gray-600">modiaproperties@gmail.com</p>
+                        <p className="text-gray-600">example@gmail.com</p>
                     </div>
                 </div>
             </div>

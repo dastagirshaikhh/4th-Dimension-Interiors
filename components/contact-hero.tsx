@@ -23,7 +23,7 @@ export default function ContactHero() {
             >
                 <h1 className="text-5xl md:text-7xl font-bold mb-4">Contact Us</h1>
                 <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-                    Let's start a conversation about your luxury real estate needs
+                    Let's talk about how we can transform your space into something extraordinary
                 </p>
             </motion.div>
         </section>

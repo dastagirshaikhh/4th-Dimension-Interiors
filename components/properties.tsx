@@ -7,77 +7,84 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
+
 // const properties: Property[] = [
 //     {
 //         id: '1',
 //         title: 'Modern Apartment in Lagos',
-//         price: 'NGN 1.5M',
+//         price: 'INR 1.5M',
 //         location: 'Airport Road, Lagos',
 //         image: 'https://cdn.prod.website-files.com/620ec747459e13c7cf12a39e/625b10a58137b364b18df2ea_iStock-94179607.jpg',
 //         bedrooms: 2,
 //         bathrooms: 2,
 //         area: 1200,
+//         type: 'Apartment', // Add this
+//         createdAt: new Date().toISOString(), // Add this
 //     },
 //     {
 //         id: '2',
 //         title: 'Luxury Villa in Victoria Island',
-//         price: 'NGN 2.8M',
+//         price: 'INR 2.8M',
 //         location: 'Victoria Island, Lagos',
 //         image: 'https://photos.zillowstatic.com/fp/0a7b03240f3206b7d1ad647134d4da5b-cc_ft_960.jpg',
 //         bedrooms: 4,
 //         bathrooms: 3,
 //         area: 2500,
+//         type: 'Villa', // Add this
+//         createdAt: new Date().toISOString(), // Add this
 //     },
 //     {
 //         id: '3',
 //         title: 'Cozy Apartment in Lekki',
-//         price: 'NGN 3.2M',
+//         price: 'INR 3.2M',
 //         location: 'Lekki, Lagos',
 //         image: 'https://photos.zillowstatic.com/fp/e2fb240f45cad639deb7bc0f7fbea48f-cc_ft_960.jpg',
 //         bedrooms: 3,
 //         bathrooms: 2,
 //         area: 1800,
+//         type: 'Apartment', // Add this
+//         createdAt: new Date().toISOString(), // Add this
 //     },
 // ]
 
 const properties: Property[] = [
     {
         id: '1',
-        title: 'Modern Apartment in Lagos',
-        price: 'NGN 1.5M',
-        location: 'Airport Road, Lagos',
-        image: 'https://cdn.prod.website-files.com/620ec747459e13c7cf12a39e/625b10a58137b364b18df2ea_iStock-94179607.jpg',
-        bedrooms: 2,
-        bathrooms: 2,
+        title: 'Luxury Living Room Makeover',
+        price: 'INR 1.5M',
+        location: 'Khar, Mumbai',
+        image: 'https://images.pexels.com/photos/7587858/pexels-photo-7587858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        bedrooms: 0, // Not applicable, but keeping type consistency
+        bathrooms: 0,
         area: 1200,
-        type: 'Apartment', // Add this
-        createdAt: new Date().toISOString(), // Add this
+        type: 'Living Room', // Updated for interior design category
+        createdAt: new Date().toISOString(),
     },
     {
         id: '2',
-        title: 'Luxury Villa in Victoria Island',
-        price: 'NGN 2.8M',
-        location: 'Victoria Island, Lagos',
-        image: 'https://photos.zillowstatic.com/fp/0a7b03240f3206b7d1ad647134d4da5b-cc_ft_960.jpg',
-        bedrooms: 4,
-        bathrooms: 3,
+        title: 'Modern Kitchen Renovation',
+        price: 'INR 2.8M',
+        location: 'Tardeo, Mumbai',
+        image: 'https://images.pexels.com/photos/7587313/pexels-photo-7587313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        bedrooms: 0,
+        bathrooms: 0,
         area: 2500,
-        type: 'Villa', // Add this
-        createdAt: new Date().toISOString(), // Add this
+        type: 'Kitchen',
+        createdAt: new Date().toISOString(),
     },
     {
         id: '3',
-        title: 'Cozy Apartment in Lekki',
-        price: 'NGN 3.2M',
-        location: 'Lekki, Lagos',
-        image: 'https://photos.zillowstatic.com/fp/e2fb240f45cad639deb7bc0f7fbea48f-cc_ft_960.jpg',
-        bedrooms: 3,
-        bathrooms: 2,
+        title: 'Elegant Bedroom Redesign',
+        price: 'INR 3.2M',
+        location: 'Bandra, Mumbai',
+        image: 'https://images.pexels.com/photos/6970025/pexels-photo-6970025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        bedrooms: 1, // Represents a bedroom redesign
+        bathrooms: 0,
         area: 1800,
-        type: 'Apartment', // Add this
-        createdAt: new Date().toISOString(), // Add this
+        type: 'Bedroom',
+        createdAt: new Date().toISOString(),
     },
-]
+];
 
 
 export default function Properties() {
@@ -93,7 +100,7 @@ export default function Properties() {
                     "text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 delay-100",
                     inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 )}>
-                    Discover Your Perfect Property Match
+                    Discover the Perfect Design to Match Your Vision
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {properties.map((property, index) => (
@@ -128,9 +135,9 @@ export default function Properties() {
                     "text-center mt-12 transition-all duration-700 delay-500",
                     inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 )}>
-                    <Link href="/properties">
+                    <Link href="/projects">
                         <Button size="lg" className="bg-[#3D0C11] hover:bg-[#2D090D] text-white">
-                            View All Properties
+                            View All Projects
                         </Button>
                     </Link>
                 </div>

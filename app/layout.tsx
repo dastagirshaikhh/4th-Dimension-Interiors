@@ -1,10 +1,12 @@
 import { initEmailJS } from '@/lib/email';
 import { libreFranklin, jetbrainsMono, poppins } from './fonts'
 import './globals.css'
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 export const metadata = {
-  title: 'Modia Properties & Consultancy',
-  description: 'Your trusted real estate advisors',
+  title: '4th Dimension Interiors',
+  description: 'Your trusted Interior advisors',
 }
 
 initEmailJS();

@@ -8,7 +8,7 @@ let properties: Property[] = [
   {
     id: "1",
     title: "Modern Apartment in Lagos",
-    price: "NGN 1.5M",
+    price: "INR 1.5M",
     location: "Airport Road, Lagos",
     image: "https://cdn.prod.website-files.com/620ec747459e13c7cf12a39e/625b10a58137b364b18df2ea_iStock-94179607.jpg",
     bedrooms: 2,
@@ -21,7 +21,7 @@ let properties: Property[] = [
   {
     id: "2",
     title: "Luxury Villa in Victoria Island",
-    price: "NGN 2.8M",
+    price: "INR 2.8M",
     location: "Victoria Island, Lagos",
     image: "https://photos.zillowstatic.com/fp/0a7b03240f3206b7d1ad647134d4da5b-cc_ft_960.jpg",
     bedrooms: 4,
@@ -34,7 +34,7 @@ let properties: Property[] = [
   {
     id: "3",
     title: "Cozy Apartment in Lekki",
-    price: "NGN 3.2M",
+    price: "INR 3.2M",
     location: "Lekki, Lagos",
     image: "https://photos.zillowstatic.com/fp/e2fb240f45cad639deb7bc0f7fbea48f-cc_ft_960.jpg",
     bedrooms: 3,
@@ -47,7 +47,7 @@ let properties: Property[] = [
   {
     id: "4",
     title: "Spacious Townhouse in Ikoyi",
-    price: "NGN 4.5M",
+    price: "INR 4.5M",
     location: "Ikoyi, Lagos",
     image: "https://photos.zillowstatic.com/fp/7f0b4f7f9f7f7f7f7f7f7f7f7f7f7f7f-cc_ft_960.jpg",
     bedrooms: 4,
@@ -60,7 +60,7 @@ let properties: Property[] = [
   {
     id: "5",
     title: "Penthouse with Ocean View",
-    price: "NGN 6.0M",
+    price: "INR 6.0M",
     location: "Eko Atlantic, Lagos",
     image: "https://photos.zillowstatic.com/fp/8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a-cc_ft_960.jpg",
     bedrooms: 5,

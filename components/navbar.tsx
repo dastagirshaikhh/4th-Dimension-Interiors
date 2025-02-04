@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { libreFranklin, jetbrainsMono } from '@/app/fonts'
@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Properties', href: '/properties' },
+    { name: 'Projects', href: '/projects' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
 ]
@@ -40,8 +40,14 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center">
-                    <Link href="/" className={`${jetbrainsMono.className} text-2xl font-bold text-[#3D0C11] transition-all duration-300 hover:scale-105`}>
-                        Modia
+                    <Link href="/" className={`${jetbrainsMono.className} text-xl font-bold text-[#3D0C11] transition-all duration-300 hover:scale-105`}>
+                        <span className="relative inline-block text-xl md:text-2xl">
+                            <span className='font-extrabold'>4</span>
+                            <span className="absolute top-0 left-3 text-[5px] md:text-base text-[#3D0C11] opacity-80">
+                                th
+                            </span>
+                        </span>
+                        &nbsp;&nbsp;<span>Dimension</span><br />Interiors
                     </Link>
                     <div className="hidden md:flex space-x-8 items-center">
                         {navItems.map((item) => (
@@ -57,11 +63,11 @@ export default function Navbar() {
                                     onMouseLeave={() => setActiveDropdown(null)}
                                 >
                                     {item.name}
-                                    {item.subItems && (
+                                    {/* {item.subItems?.length > 0 && (
                                         <ChevronDown className="ml-1 h-4 w-4" />
-                                    )}
+                                    )} */}
                                 </Link>
-                                {item.subItems && (
+                                {/* {item.subItems && (
                                     <AnimatePresence>
                                         {activeDropdown === item.name && (
                                             <motion.div
@@ -87,7 +93,7 @@ export default function Navbar() {
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
-                                )}
+                                )} */}
                             </div>
                         ))}
                     </div>
@@ -130,7 +136,7 @@ export default function Navbar() {
                                     >
                                         {item.name}
                                     </Link>
-                                    {item.subItems && (
+                                    {/* {item.subItems && (
                                         <div className="ml-4 mt-2 space-y-2">
                                             {item.subItems.map((subItem) => (
                                                 <Link
@@ -143,7 +149,7 @@ export default function Navbar() {
                                                 </Link>
                                             ))}
                                         </div>
-                                    )}
+                                    )} */}
                                 </div>
                             ))}
                             <Button

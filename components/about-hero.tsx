@@ -21,9 +21,9 @@ export default function AboutHero() {
                 transition={{ duration: 0.8 }}
                 className="relative z-10 text-center text-white"
             >
-                <h1 className="text-5xl md:text-7xl font-bold mb-4">About Modia Properties</h1>
+                <h1 className="text-5xl md:text-7xl font-bold mb-4">About</h1>
                 <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-                    Elevating the art of luxury real estate in Nigeria and beyond
+                    Elevating the art of luxury Interior Designs in Mumbai and beyond
                 </p>
             </motion.div>
         </section>

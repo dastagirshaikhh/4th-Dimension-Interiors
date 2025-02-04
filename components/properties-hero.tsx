@@ -1,9 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Search } from 'lucide-react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 export default function PropertiesHero() {
@@ -11,7 +8,7 @@ export default function PropertiesHero() {
         <section className="relative bg-[#3D0C11] text-white py-24 md:py-32">
             <div className="absolute inset-0 overflow-hidden">
                 <Image
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                    src="https://images.pexels.com/photos/3935342/pexels-photo-3935342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     alt="Luxury Property"
                     layout="fill"
                     objectFit="cover"
@@ -26,12 +23,12 @@ export default function PropertiesHero() {
                     className="text-center"
                 >
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                        Discover Your Perfect Property Match
+                        Discover Your Ideal Living Space
                     </h1>
                     <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto">
-                        Explore our curated selection of premium properties and find your ideal home or investment opportunity.
+                        Discover our portfolio of exceptional spaces and find your design inspiration.
                     </p>
-                    <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
+                    {/* <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
                         <div className="flex-grow relative">
                             <Input
                                 type="text"
@@ -43,7 +40,7 @@ export default function PropertiesHero() {
                         <Button className="bg-white text-[#3D0C11] hover:bg-gray-100 transition-colors py-3 px-6 text-lg font-semibold">
                             Search Properties
                         </Button>
-                    </div>
+                    </div> */}
                 </motion.div>
             </div>
         </section>

@@ -7,17 +7,17 @@ import { Quote } from "lucide-react"
 const testimonials = [
     {
         quote:
-            "Modia Properties made finding our dream home an absolute pleasure. Their expertise and dedication are unmatched.",
+            "4th Dimension Interior Designers made finding our dream home an absolute pleasure. Their expertise and dedication are unmatched.",
         author: "Sarah & Tom Johnson",
     },
     {
         quote:
-            "As an investor, I've worked with many real estate firms, but Modia Properties stands out for their professionalism and market insights.",
+            "As an investor, I've worked with many Interior firms, but 4th Dimension Interior Designers stands out for their professionalism and market insights.",
         author: "David Chen",
     },
     {
         quote:
-            "The team at Modia Properties went above and beyond to ensure a smooth and successful property sale. Highly recommended!",
+            "The team at 4th Dimension Interior Designers went above and beyond to ensure a smooth and successful Interior Design. Highly recommended!",
         author: "Amina Okafor",
     },
 ]

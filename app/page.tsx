@@ -1,4 +1,3 @@
-import Navbar from '@/components/navbar'
 import Hero from '@/components/hero'
 import Stats from '@/components/stats'
 import Properties from '@/components/properties'
@@ -6,6 +5,7 @@ import GlobalNetwork from '@/components/global-network'
 import Services from '@/components/services'
 import Contact from '@/components/contact'
 import BackToTop from '@/components/back-to-top'
+import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
 export default function Home() {

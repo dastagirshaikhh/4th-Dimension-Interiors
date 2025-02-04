@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useState, useRef } from 'react'
 import { Button } from '@/components/ui/button'
@@ -73,15 +73,15 @@ export default function Contact() {
                             <div className="space-y-4">
                                 <p className="flex items-center">
                                     <Send size={20} className="mr-2" />
-                                    info@modiaproperties.com
+                                    example@gmail.com
                                 </p>
                                 <p className="flex items-center">
                                     <Send size={20} className="mr-2" />
-                                    +234 803 974 3274
+                                    +91 123 456 789
                                 </p>
                                 <p className="flex items-center">
                                     <Send size={20} className="mr-2" />
-                                    No 2 Michika street off Ahmadu Bello way Area 11 Garki Abuja Nigeria
+                                    Kharghar Navi Mumbai, Navi Mumbai (New Mumbai), India 410210
                                 </p>
                             </div>
                         </div>

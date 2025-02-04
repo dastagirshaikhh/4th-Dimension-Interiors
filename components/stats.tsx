@@ -8,8 +8,8 @@ import { cn } from '@/lib/utils'
 const stats: Statistic[] = [
     { value: '100+', label: 'Satisfied Customers' },
     { value: '5+', label: 'Years of Experience' },
-    { value: '10+', label: 'States in Nigeria' },
-    { value: '25+', label: 'Property Collections' },
+    { value: '10+', label: 'States in Mumbai' },
+    { value: '25+', label: 'Design Collections' },
 ]
 
 export default function Stats() {
@@ -27,15 +27,13 @@ export default function Stats() {
                             "text-3xl md:text-4xl font-bold text-[#3D0C11] leading-tight transition-all duration-700 delay-100",
                             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                         )}>
-                            Your Trusted Real Estate Advisors
+                            Your Trusted Interior Advisors
                         </h2>
                         <p className={cn(
                             "text-gray-600 leading-relaxed transition-all duration-700 delay-200",
                             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                         )}>
-                            At MODIA Properties, we are committed to helping you find the perfect home.
-                            Combined with our confidence, expert market knowledge with personalized service,
-                            we ensure a seamless experience tailored to your needs.
+                            At 4th Dimension Interiors, we are committed to helping you create the perfect home interior. Combined with our confidence, expert design knowledge, and personalized service, we ensure a seamless experience tailored to your needs.
                         </p>
                     </div>
                     <div className="lg:w-1/2 space-y-8">
@@ -60,8 +58,8 @@ export default function Stats() {
                             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                         )}>
                             <Image
-                                src="https://photos.zillowstatic.com/fp/62384164428156754b21831a144165d0-cc_ft_960.jpg"
-                                alt="Modern apartment building"
+                                src="https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="Red and Brown Floral Stair Carpet"
                                 fill
                                 className="object-cover transition-transform duration-700 hover:scale-110"
                             />
