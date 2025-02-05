@@ -6,6 +6,7 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 import { libreFranklin, poppins } from '@/app/fonts'
+import Link from 'next/link'
 
 const cities = [
     { name: 'Mumbai', x: '10%', y: '60%' },
@@ -69,8 +70,11 @@ export default function GlobalNetwork() {
                             variant="secondary"
                             size="lg"
                             className={`${poppins.className} bg-white hover:bg-white/90 text-black px-8 py-6 text-lg font-medium rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105`}
+                            asChild
                         >
-                            Learn More
+                            <Link href="/about">
+                                Learn More
+                            </Link>
                         </Button>
                     </motion.div>
                 </motion.div>

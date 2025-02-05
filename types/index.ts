@@ -13,7 +13,7 @@ export interface Property {
 }
 
 export interface Statistic {
-    value: string
+    value: number
     label: string
 }
 
