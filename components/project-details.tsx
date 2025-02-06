@@ -34,14 +34,14 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                 >
                     <div className="relative h-96 mb-4 rounded-lg overflow-hidden">
                         <Image
-                            src={project.images[selectedImage] || "/placeholder.svg"}
+                            src={project.images?.[selectedImage] || "/placeholder.svg"}
                             alt={`${project.title} - Image ${selectedImage + 1}`}
                             layout="fill"
                             objectFit="cover"
                         />
                     </div>
                     <div className="grid grid-cols-5 gap-2">
-                        {project.images.map((image, index) => (
+                        {project.images?.map((image, index) => (
                             <div
                                 key={index}
                                 className={`relative h-20 rounded-lg overflow-hidden cursor-pointer ${index === selectedImage ? "ring-2 ring-[#3D0C11]" : ""

@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <Link href={`/projects/${project.id}`}>
                 <div className="relative h-64">
                     <Image
-                        src={project.images[0] || "/placeholder.svg"}
+                        src={project.images?.[0] || "/placeholder.svg"}
                         alt={project.title}
                         layout="fill"
                         objectFit="cover"
