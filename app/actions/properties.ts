@@ -3,74 +3,84 @@
 import { revalidatePath } from "next/cache"
 import type { Property } from "@/types"
 
-// This would typically connect to your database
 let properties: Property[] = [
   {
     id: "1",
-    title: "Modern Apartment in Lagos",
-    price: "INR 1.5M",
+    title: "Luxury Living Room Makeover",
+    price: "NGN 1.5M",
     location: "Airport Road, Lagos",
-    image: "https://cdn.prod.website-files.com/620ec747459e13c7cf12a39e/625b10a58137b364b18df2ea_iStock-94179607.jpg",
-    bedrooms: 2,
-    bathrooms: 2,
+    image: "https://images.pexels.com/photos/7587858/pexels-photo-7587858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    bedrooms: 0,
+    bathrooms: 0,
     area: 1200,
-    type: "Apartment",
+    type: "Living Room",
     status: "active",
     createdAt: "2023-01-15",
+    description:
+      "Revamp your living space with this modern living room makeover. Designed to bring elegance and comfort, this space is perfect for relaxation and entertaining guests.",
   },
   {
     id: "2",
-    title: "Luxury Villa in Victoria Island",
-    price: "INR 2.8M",
+    title: "Modern Kitchen Renovation",
+    price: "NGN 2.8M",
     location: "Victoria Island, Lagos",
-    image: "https://photos.zillowstatic.com/fp/0a7b03240f3206b7d1ad647134d4da5b-cc_ft_960.jpg",
-    bedrooms: 4,
-    bathrooms: 3,
+    image: "https://images.pexels.com/photos/7587313/pexels-photo-7587313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    bedrooms: 0,
+    bathrooms: 0,
     area: 2500,
-    type: "Villa",
+    type: "Kitchen",
     status: "active",
     createdAt: "2023-03-22",
+    description:
+      "Upgrade your kitchen with a sleek and contemporary design. Featuring state-of-the-art appliances, stylish finishes, and optimized storage solutions, this renovation is perfect for modern homes.",
   },
   {
     id: "3",
-    title: "Cozy Apartment in Lekki",
-    price: "INR 3.2M",
+    title: "Elegant Bedroom Redesign",
+    price: "NGN 3.2M",
     location: "Lekki, Lagos",
-    image: "https://photos.zillowstatic.com/fp/e2fb240f45cad639deb7bc0f7fbea48f-cc_ft_960.jpg",
-    bedrooms: 3,
-    bathrooms: 2,
+    image: "https://images.pexels.com/photos/6970025/pexels-photo-6970025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    bedrooms: 1,
+    bathrooms: 0,
     area: 1800,
-    type: "Apartment",
+    type: "Bedroom",
     status: "active",
     createdAt: "2023-05-10",
+    description:
+      "Transform your bedroom into a serene retreat with this elegant redesign. Featuring warm lighting, soft textures, and stylish decor, this space is ideal for rest and relaxation.",
   },
   {
     id: "4",
-    title: "Spacious Townhouse in Ikoyi",
-    price: "INR 4.5M",
+    title: "Spacious Home Office Setup",
+    price: "NGN 4.5M",
     location: "Ikoyi, Lagos",
-    image: "https://photos.zillowstatic.com/fp/7f0b4f7f9f7f7f7f7f7f7f7f7f7f7f7f-cc_ft_960.jpg",
-    bedrooms: 4,
-    bathrooms: 3,
+    image: "https://images.pexels.com/photos/7130487/pexels-photo-7130487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    bedrooms: 0,
+    bathrooms: 0,
     area: 2200,
-    type: "Townhouse",
+    type: "Office",
     status: "active",
     createdAt: "2023-06-05",
+    description:
+      "Enhance productivity with a modern home office setup. Designed with ergonomic furniture, ample lighting, and smart storage, this workspace ensures efficiency and style.",
   },
   {
     id: "5",
-    title: "Penthouse with Ocean View",
-    price: "INR 6.0M",
+    title: "Penthouse Lounge & Interior Upgrade",
+    price: "NGN 6.0M",
     location: "Eko Atlantic, Lagos",
-    image: "https://photos.zillowstatic.com/fp/8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a8a-cc_ft_960.jpg",
-    bedrooms: 5,
-    bathrooms: 4,
+    image: "https://images.pexels.com/photos/6587849/pexels-photo-6587849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    bedrooms: 0,
+    bathrooms: 0,
     area: 3000,
-    type: "Penthouse",
+    type: "Lounge",
     status: "active",
     createdAt: "2023-07-20",
+    description:
+      "Experience luxury with this stunning penthouse lounge redesign. Featuring elegant decor, premium furnishings, and breathtaking views, this upgrade offers the ultimate relaxation experience.",
   },
-]
+];
+
 
 export async function getProperties() {
   return properties
@@ -89,6 +99,7 @@ export async function addProperty(formData: FormData) {
     type: formData.get("type") as string,
     status: "active",
     createdAt: new Date().toISOString().split("T")[0],
+    description: formData.get("description") as string,
   }
 
   properties.push(property)
@@ -110,6 +121,7 @@ export async function updateProperty(id: string, formData: FormData) {
         bathrooms: Number.parseInt(formData.get("bathrooms") as string),
         area: Number.parseInt(formData.get("area") as string),
         type: formData.get("type") as string,
+        description: formData.get("description") as string,
       }
     }
     return property

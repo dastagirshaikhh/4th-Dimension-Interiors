@@ -1,21 +1,21 @@
-import Footer from '@/components/footer'
-import Navbar from '@/components/navbar'
-import Properties from '@/components/properties'
-import PropertiesHero from '@/components/properties-hero'
-import { Metadata } from 'next'
+import type { Metadata } from "next"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import ProjectsHero from "@/components/projects-hero"
+import ProjectsList from "@/components/projects-list"
 
 export const metadata: Metadata = {
-    title: 'Discover Your Perfect Interior Match | 4th Dimension Interior Designers',
-    description: 'Explore our curated selection of premium designs and find your ideal home or investment opportunity.',
+    title: "Our Projects | Modia Interiors",
+    description: "Explore our portfolio of stunning interior design projects across residential and commercial spaces.",
 }
 
-export default function PropertiesPage() {
+export default function ProjectsPage() {
     return (
         <>
             <Navbar />
             <main className="min-h-screen bg-gray-50">
-                <PropertiesHero />
-                <Properties />
+                <ProjectsHero />
+                <ProjectsList />
             </main>
             <Footer />
         </>
