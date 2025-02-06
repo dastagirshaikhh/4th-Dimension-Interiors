@@ -37,6 +37,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                             src={project.images?.[selectedImage] || "/placeholder.svg"}
                             alt={`${project.title} - Image ${selectedImage + 1}`}
                             layout="fill"
+                            priority
                             objectFit="cover"
                         />
                     </div>
@@ -111,6 +112,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 src={project.beforeImage || "/placeholder.svg"}
                                 alt={`${project.title} - Before`}
                                 layout="fill"
+                                priority
                                 objectFit="cover"
                             />
                         </div>
@@ -122,6 +124,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 src={project.afterImage || "/placeholder.svg"}
                                 alt={`${project.title} - After`}
                                 layout="fill"
+                                priority
                                 objectFit="cover"
                             />
                         </div>

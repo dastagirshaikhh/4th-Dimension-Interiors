@@ -197,6 +197,7 @@ export default function Properties() {
                                     src={property.image}
                                     alt={property.title}
                                     layout="fill"
+                                    priority
                                     objectFit="cover"
                                 />
                             </div>

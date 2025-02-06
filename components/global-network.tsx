@@ -88,6 +88,7 @@ export default function GlobalNetwork() {
                             src="https://thumbs.dreamstime.com/b/global-network-across-planet-earth-blockchain-global-network-across-planet-earth-blockchain-elements-image-136686433.jpg"
                             alt="World Map"
                             layout="fill"
+                            priority
                             objectFit="contain"
                             className="opacity-30"
                         />

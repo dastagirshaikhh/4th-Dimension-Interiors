@@ -5,7 +5,8 @@ import Footer from "@/components/footer"
 import ProjectDetails from "@/components/project-details"
 import { getProjectById } from "@/app/actions/projects"
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const params = await props.params;
     const project = await getProjectById(params.id)
 
     if (!project) {
@@ -20,7 +21,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     }
 }
 
-export default async function ProjectPage({ params }: { params: { id: string } }) {
+export default async function ProjectPage(props: { params: Promise<{ id: string }> }) {
+    const params = await props.params;
     const project = await getProjectById(params.id)
 
     if (!project) {

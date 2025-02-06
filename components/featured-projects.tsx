@@ -69,6 +69,7 @@ export default function FeaturedProjects() {
                             src={activeProject.image || "/placeholder.svg"}
                             alt={activeProject.title}
                             layout="fill"
+                            priority
                             objectFit="cover"
                         />
                     </motion.div>
