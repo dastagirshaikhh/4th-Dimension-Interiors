@@ -4,6 +4,8 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ProjectDetails from "@/components/project-details"
 import { getProjectById } from "@/app/actions/projects"
+import ProjectDetailsHero from "@/components/ProjectDetailsHero"
+
 
 export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const params = await props.params;
@@ -29,10 +31,13 @@ export default async function ProjectPage(props: { params: Promise<{ id: string 
         notFound()
     }
 
+    const projectHero = project.images?.[0]
+
     return (
         <>
             <Navbar />
             <main className="min-h-screen bg-gray-50">
+                <ProjectDetailsHero image={projectHero} />
                 <ProjectDetails project={project} />
             </main>
             <Footer />
