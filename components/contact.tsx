@@ -5,9 +5,11 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, CheckCircle, XCircle } from 'lucide-react'
+import { Send, CheckCircle, XCircle, MailIcon } from 'lucide-react'
+import { FaAmilia, FaLocationArrow, FaMailBulk, FaMailchimp, FaVoicemail, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser'
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '@/lib/email'
+import Link from 'next/link';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -72,15 +74,16 @@ export default function Contact() {
                             <p className="mb-6">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
                             <div className="space-y-4">
                                 <p className="flex items-center">
-                                    <Send size={20} className="mr-2" />
-                                    example@gmail.com
+                                    <FaMailBulk size={20} className="mr-2" />
+                                    4thdimension018@gmail.com
                                 </p>
                                 <p className="flex items-center">
-                                    <Send size={20} className="mr-2" />
-                                    +91 123 456 789
+                                    <Link href="https://wa.me/+918828086905" passHref target='_blank' className="flex items-center">
+                                        <FaWhatsapp size={20} className="mr-2" /> +91 8828086905
+                                    </Link>
                                 </p>
                                 <p className="flex items-center">
-                                    <Send size={20} className="mr-2" />
+                                    <FaLocationArrow size={20} className="mr-2" />
                                     Kharghar Navi Mumbai, Navi Mumbai (New Mumbai), India 410210
                                 </p>
                             </div>

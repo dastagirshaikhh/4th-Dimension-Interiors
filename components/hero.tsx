@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { libreFranklin, jetbrainsMono } from '@/app/fonts'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Hero() {
     const [offset, setOffset] = useState(0)
@@ -95,9 +96,11 @@ export default function Hero() {
                     </p>
                     <Button
                         className={`${jetbrainsMono.className} bg-white text-[#3D0C11] hover:bg-white/90 transition-colors animate-fade-up animation-delay-200`}
-                        size="lg"
+                        size="lg" asChild
                     >
-                        Explore Projects
+                        <Link href="/projects">
+                            Explore Projects
+                        </Link>
                     </Button>
                 </div>
                 <div className="absolute bottom-32 right-4 md:right-16 max-w-md text-right animate-fade-up animation-delay-300">

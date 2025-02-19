@@ -10,10 +10,10 @@ import Link from 'next/link'
 
 const cities = [
     { name: 'Mumbai', x: '10%', y: '60%' },
-    { name: 'Navi Mumbai', x: '45%', y: '30%' },
+    { name: 'Kerela', x: '45%', y: '30%' },
     { name: 'Kolkata', x: '25%', y: '40%' },
     { name: 'Moscow', x: '65%', y: '50%' },
-    { name: 'New Delhi', x: '85%', y: '45%' },
+    { name: 'Hyderabad', x: '85%', y: '45%' },
 ]
 
 export default function GlobalNetwork() {

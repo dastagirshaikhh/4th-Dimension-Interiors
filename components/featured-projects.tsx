@@ -6,6 +6,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Project } from "@/types"
+import { useInView } from "react-intersection-observer"
+import { cn } from "@/lib/utils"
 
 const projects: Project[] = [
     {
@@ -53,10 +55,20 @@ const projects: Project[] = [
 export default function FeaturedProjects() {
     const [activeProject, setActiveProject] = useState(projects[0])
 
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    })
+
     return (
-        <section className="py-24 bg-gray-50">
+        <section ref={ref} className="py-24 bg-gray-50">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+                <h2 className={cn(
+                    "text-3xl md:text-4xl font-bold text-center mb-12 transition-all duration-700 delay-100",
+                    inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                )}>
+                    Featured Projects
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <motion.div
                         key={activeProject.id}
@@ -113,7 +125,7 @@ export default function FeaturedProjects() {
                             </div>
                         </motion.div>
                         <Link href={`/projects/${activeProject.id}`}>
-                            <Button>View Project Details</Button>
+                            <Button className="transition-all duration-300 transform hover:scale-105">View Project Details</Button>
                         </Link>
                     </div>
                 </div>
@@ -130,7 +142,7 @@ export default function FeaturedProjects() {
                 </div>
                 <div className="mt-12 text-center">
                     <Link href="/projects">
-                        <Button size="lg">View All Projects</Button>
+                        <Button size="lg" className="transition-all duration-300 transform hover:scale-105">View All Projects</Button>
                     </Link>
                 </div>
             </div>

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 import { MapPin, Phone, Mail } from "lucide-react"
+import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa"
 
 export default function ContactInfo() {
     return (
@@ -30,15 +32,18 @@ export default function ContactInfo() {
                     <Phone className="w-6 h-6 text-[#3D0C11] mr-4" />
                     <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-gray-600">+91 123 456 789</p>
-                        <p className="text-gray-600">+91 123 456 789</p>
+                        <p className="text-gray-600">
+                            <Link href="https://wa.me/+918828086905" passHref target='_blank'>
+                                +91 8828086905
+                            </Link>
+                        </p>
                     </div>
                 </div>
                 <div className="flex items-center">
                     <Mail className="w-6 h-6 text-[#3D0C11] mr-4" />
                     <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-gray-600">example@gmail.com</p>
+                        <p className="text-gray-600">4thdimension018@gmail.com</p>
                     </div>
                 </div>
             </div>

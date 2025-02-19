@@ -7,6 +7,7 @@ import { Calendar, MapPin, Ruler, User, Paintbrush } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import type { Project } from "@/types"
+import Link from "next/link"
 
 interface ProjectDetailsProps {
     project: Project
@@ -91,7 +92,11 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                                 </div>
                             </div>
                             <p className="text-gray-600 mb-6">{project.description}</p>
-                            <Button className="w-full">Contact Us About This Project</Button>
+                            <Button className="w-full transition-all duration-300 transform hover:scale-105" asChild>
+                                <Link href="/contact">
+                                    Contact Us About This Project
+                                </Link>
+                            </Button>
                         </CardContent>
                     </Card>
                 </motion.div>
