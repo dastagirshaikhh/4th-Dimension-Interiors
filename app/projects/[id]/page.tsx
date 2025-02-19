@@ -5,10 +5,10 @@ import Footer from "@/components/footer"
 import ProjectDetails from "@/components/project-details"
 import ProjectDetailsHero from "@/components/ProjectDetailsHero"
 import { GetProjectById } from "@/app/actions/appwrite"
-import { ProjectList } from "@/types"
 
 
-async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
+
+export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const params = await props.params;
     const project = await GetProjectById(params.id)
 
@@ -19,21 +19,19 @@ async function generateMetadata(props: { params: Promise<{ id: string }> }): Pro
     }
 
     return {
-        title: `${project.title} | Modia Interiors`,
+        title: `${project.title} | 4th Dimension Interiors`,
         description: `View details of our ${project.title} project located in ${project.location}`,
     }
 }
 
+
 export default async function ProjectPage(props: { params: Promise<{ id: string }> }) {
     const params = await props.params;
     const project = await GetProjectById(params.id)
-    // console.log(project)
-    generateMetadata(props)
 
     if (!project) {
         notFound()
     }
-
 
     return (
         <>
@@ -46,7 +44,6 @@ export default async function ProjectPage(props: { params: Promise<{ id: string 
                     description={project.description}
                     location={project.location}
                     area={project.area}
-                    
                     clientName={project.clientName}
                     completionDate={project.completionDate}
                     designerName={project.designerName}

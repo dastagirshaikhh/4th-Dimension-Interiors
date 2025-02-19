@@ -29,11 +29,11 @@ export default async function ProjectsPage() {
         images: doc.images,
         beforeImage: doc.beforeImage,
         afterImage: doc.afterImage,
-        $createdAt: doc.$createdAt,
-        $updatedAt: doc.$updatedAt,
-        $permissions: doc.$permissions,
-        $databaseId: doc.$databaseId,
-        $collectionId: doc.$collectionId,
+        // $createdAt: doc.$createdAt,
+        // $updatedAt: doc.$updatedAt,
+        // $permissions: doc.$permissions,
+        // $databaseId: doc.$databaseId,
+        // $collectionId: doc.$collectionId,
     })) || [];
 
     return (

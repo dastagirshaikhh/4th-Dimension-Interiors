@@ -45,11 +45,7 @@ export interface ProjectList {
     images: string[];
     beforeImage: string;
     afterImage: string;
-    $createdAt: string;
-    $updatedAt: string;
-    $permissions: string[];
-    $databaseId: string;
-    $collectionId: string;
+   
 }
 
 export interface ProjectDetails {

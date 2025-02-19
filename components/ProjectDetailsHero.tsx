@@ -7,14 +7,16 @@ export default function ProjectDetailsHero({ image }: { image?: string }) {
     return (
         <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
             {image ? (
-                <Image
-                    src={image}
-                    alt="Interior design projects"
-                    layout="fill"
-                    objectFit="cover"
-                    className="absolute inset-0"
-                    priority
-                />
+                <>
+                    <Image
+                        src={image}
+                        alt="Interior design projects"
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-transparent" />
+                </>
             ) : (
                 <>
                     <div className="absolute inset-0 bg-black bg-opacity-50" />
