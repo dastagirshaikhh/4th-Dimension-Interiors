@@ -142,7 +142,7 @@ export default function FeaturedProjects() {
                 </div>
                 <div className="mt-12 text-center">
                     <Link href="/projects">
-                        <Button size="lg" className="transition-all duration-300 transform hover:scale-105">View All Projects</Button>
+                        <Button size="lg" className="">View All Projects</Button>
                     </Link>
                 </div>
             </div>

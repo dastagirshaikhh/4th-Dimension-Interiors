@@ -3,13 +3,14 @@ import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ProjectDetails from "@/components/project-details"
-import { getProjectById } from "@/app/actions/projects"
 import ProjectDetailsHero from "@/components/ProjectDetailsHero"
+import { GetProjectById } from "@/app/actions/appwrite"
+import { ProjectList } from "@/types"
 
 
-export async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
+async function generateMetadata(props: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const params = await props.params;
-    const project = await getProjectById(params.id)
+    const project = await GetProjectById(params.id)
 
     if (!project) {
         return {
@@ -25,20 +26,33 @@ export async function generateMetadata(props: { params: Promise<{ id: string }> 
 
 export default async function ProjectPage(props: { params: Promise<{ id: string }> }) {
     const params = await props.params;
-    const project = await getProjectById(params.id)
+    const project = await GetProjectById(params.id)
+    // console.log(project)
+    generateMetadata(props)
 
     if (!project) {
         notFound()
     }
 
-    const projectHero = project.images?.[0]
 
     return (
         <>
             <Navbar />
             <main className="min-h-screen bg-gray-50">
-                <ProjectDetailsHero image={projectHero} />
-                <ProjectDetails project={project} />
+                <ProjectDetailsHero image={project.images?.[0]} />
+                <ProjectDetails
+                    title={project.title}
+                    images={project.images}
+                    description={project.description}
+                    location={project.location}
+                    area={project.area}
+                    
+                    clientName={project.clientName}
+                    completionDate={project.completionDate}
+                    designerName={project.designerName}
+                    beforeImage={project.beforeImage}
+                    afterImage={project.afterImage}
+                />
             </main>
             <Footer />
         </>

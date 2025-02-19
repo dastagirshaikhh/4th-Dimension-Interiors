@@ -1,21 +1,25 @@
 "use client"
 
-import { useState, useEffect } from "react"
+// import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { getProjects } from "@/app/actions/projects"
+// import { getProjects } from "@/app/actions/projects"
 import ProjectCard from "@/components/project-card"
-import type { Project } from "@/types"
+import type { ProjectList } from "@/types"
 
-export default function ProjectsList() {
-    const [projects, setProjects] = useState<Project[]>([])
+interface ProjectListProps {
+    projects: ProjectList[];
+}
 
-    useEffect(() => {
-        const fetchProjects = async () => {
-            const fetchedProjects = await getProjects()
-            setProjects(fetchedProjects)
-        }
-        fetchProjects()
-    }, [])
+export default function ProjectsList({ projects }: ProjectListProps) {
+    // const [projectList, setProjectList] = useState<ProjectList[]>(projects)
+
+    // useEffect(() => {
+    //     const fetchProjects = async () => {
+    //         const fetchedProjects = await getProjects()
+    //         setProjects(fetchedProjects)
+    //     }
+    //     fetchProjects()
+    // }, [])
 
     return (
         <section className="py-20">
@@ -28,7 +32,7 @@ export default function ProjectsList() {
                 >
                     {projects.map((project, index) => (
                         <motion.div
-                            key={project.id}
+                            key={project.$id}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}

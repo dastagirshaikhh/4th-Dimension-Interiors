@@ -3,10 +3,10 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Calendar, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import type { Project } from "@/types"
+import type { ProjectList } from "@/types"
 
 interface ProjectCardProps {
-    project: Project
+    project: ProjectList
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             whileHover={{ y: -5 }}
         >
-            <Link href={`/projects/${project.id}`}>
+            <Link href={`/projects/${project.$id}`}>
                 <div className="relative h-64">
                     <Image
                         src={project.images?.[0] || "/placeholder.svg"}
