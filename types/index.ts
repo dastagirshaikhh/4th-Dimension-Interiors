@@ -14,21 +14,23 @@ export interface Property {
 }
 
 export interface Project {
-    id: string
-    title: string
-    description: string
-    location: string
-    image?: string
-    images?: string[]
-    category: string
-    completionDate: string
-    area: number
-    client?: string
-    designer?: string
-    status: "completed" | "in-progress"
-    createdAt: string
-    beforeImage?: string
-    afterImage?: string
+    $id: string;
+    title: string;
+    description: string;
+    location: string;
+    area: string;
+    category: string;
+    completionDate: string;
+    clientName: string;
+    designerName: string;
+    images: string[];
+    beforeImage: string;
+    afterImage: string;
+    $createdAt: string;
+    $updatedAt: string;
+    $permissions: string[];
+    $databaseId: string;
+    $collectionId: string;
 }
 
 
@@ -45,13 +47,12 @@ export interface ProjectList {
     images: string[];
     beforeImage: string;
     afterImage: string;
-   
 }
 
 export interface ProjectDetails {
     title: string;
     afterImage: string;
-    area: string; 
+    area: string;
     beforeImage: string;
     clientName: string;
     completionDate: string;
