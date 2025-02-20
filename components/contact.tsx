@@ -35,10 +35,15 @@ export default function Contact() {
         setErrorMessage('')
 
         try {
-            const result = await emailjs.sendForm(
+            const result = await emailjs.send(
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
-                formRef.current!,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message
+                },
                 EMAILJS_PUBLIC_KEY
             )
             console.log('EmailJS result:', result.text)
