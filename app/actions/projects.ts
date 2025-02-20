@@ -1,6 +1,6 @@
 "use server";
 
-import { GetProjectById, GetProjects } from "./appwrite"
+
 
 // let projects: Project[] = [
 //     {
