@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Send, CheckCircle, XCircle, MailIcon } from 'lucide-react'
-import { FaAmilia, FaLocationArrow, FaMailBulk, FaMailchimp, FaVoicemail, FaWhatsapp } from 'react-icons/fa';
+import { CheckCircle, XCircle } from 'lucide-react'
+import { FaLocationArrow, FaMailBulk, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser'
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '@/lib/email'
 import Link from 'next/link';
