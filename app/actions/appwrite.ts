@@ -1,7 +1,7 @@
 "use server";
 
 import { COLLECTION_ID, DATABASE_ID, databases } from "@/lib/appwrite";
-import { ProjectDetail } from "@/types";
+
 
 export const GetProjects = async () => {
     try {
