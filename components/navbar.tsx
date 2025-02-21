@@ -104,8 +104,11 @@ export default function Navbar() {
                                 !isScrolled && "bg-white/10 backdrop-blur-sm hover:bg-white/20",
                                 "hover:scale-105"
                             )}
+                            asChild
                         >
-                            Get Started
+                            <Link href="/questionnaire">
+                                Get Started
+                            </Link>
                         </Button>
                     </div>
                     <button
@@ -155,8 +158,11 @@ export default function Navbar() {
                             <Button
                                 className={`${jetbrainsMono.className} bg-[#3D0C11] text-white hover:bg-[#2D090D] transition-colors w-full`}
                                 onClick={() => setIsOpen(false)}
+                                asChild
                             >
-                                Get Started
+                                <Link href="/questionnaire">
+                                    Get Started
+                                </Link>
                             </Button>
                         </div>
                     </motion.div>
