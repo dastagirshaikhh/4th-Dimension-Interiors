@@ -22,9 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         alt={project.title}
                         layout="fill"
                         objectFit="cover"
-                        // className="transition-transform duration-300 hover:scale-110"
                     />
-                    {/* <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 hover:bg-opacity-10" /> */}
                     <div className="absolute bottom-4 left-4 bg-white py-1 px-3 rounded-full text-sm font-semibold text-[#3D0C11]">
                         {project.category}
                     </div>

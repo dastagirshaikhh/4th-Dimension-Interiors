@@ -28,13 +28,10 @@ export const Projects = async () => {
         $collectionId: doc.$collectionId,
     })) || [];
 
-    // Sort projects by $createdAt date (newest first)
     const sortedProjects = projectList.sort((a, b) => new Date(b.$createdAt).getTime() - new Date(a.$createdAt).getTime());
     
-    // Get the 6 most recent projects
     const recentProjects = sortedProjects.slice(0, 6);
     
-    // Get the 3 most recent projects for FeaturedProjects
     const featuredProjects = recentProjects.slice(0, 3);
     
     return (

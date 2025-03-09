@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { libreFranklin, jetbrainsMono } from '@/app/fonts'
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
 
 const navItems = [
     { name: 'Home', href: '/' },
@@ -65,37 +64,8 @@ export default function Navbar() {
                                     onMouseLeave={() => setActiveDropdown(null)}
                                 >
                                     {item.name}
-                                    {/* {item.subItems?.length > 0 && (
-                                        <ChevronDown className="ml-1 h-4 w-4" />
-                                    )} */}
+                    
                                 </Link>
-                                {/* {item.subItems && (
-                                    <AnimatePresence>
-                                        {activeDropdown === item.name && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: -10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: -10 }}
-                                                transition={{ duration: 0.2 }}
-                                                className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-                                                onMouseEnter={() => setActiveDropdown(item.name)}
-                                                onMouseLeave={() => setActiveDropdown(null)}
-                                            >
-                                                <div className="py-1">
-                                                    {item.subItems.map((subItem) => (
-                                                        <Link
-                                                            key={subItem.name}
-                                                            href={subItem.href}
-                                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                        >
-                                                            {subItem.name}
-                                                        </Link>
-                                                    ))}
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                )} */}
                             </div>
                         ))}
                     </div>
@@ -141,20 +111,7 @@ export default function Navbar() {
                                     >
                                         {item.name}
                                     </Link>
-                                    {/* {item.subItems && (
-                                        <div className="ml-4 mt-2 space-y-2">
-                                            {item.subItems.map((subItem) => (
-                                                <Link
-                                                    key={subItem.name}
-                                                    href={subItem.href}
-                                                    className="text-gray-600 hover:text-[#3D0C11] transition-colors duration-300 block text-sm"
-                                                    onClick={() => setIsOpen(false)}
-                                                >
-                                                    {subItem.name}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    )} */}
+                        
                                 </div>
                             ))}
                             <Button

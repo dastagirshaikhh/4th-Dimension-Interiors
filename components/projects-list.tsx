@@ -1,8 +1,6 @@
 "use client"
 
-// import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-// import { getProjects } from "@/app/actions/projects"
 import ProjectCard from "@/components/project-card"
 import type { ProjectList } from "@/types"
 
@@ -11,16 +9,6 @@ interface ProjectListProps {
 }
 
 export default function ProjectsList({ projects }: ProjectListProps) {
-    // const [projectList, setProjectList] = useState<ProjectList[]>(projects)
-
-    // useEffect(() => {
-    //     const fetchProjects = async () => {
-    //         const fetchedProjects = await getProjects()
-    //         setProjects(fetchedProjects)
-    //     }
-    //     fetchProjects()
-    // }, [])
-
     return (
         <section className="py-20">
             <div className="container mx-auto px-4">

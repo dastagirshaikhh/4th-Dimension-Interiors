@@ -108,7 +108,7 @@ export default function Stats() {
                     })
                     if (count >= stat.value) clearInterval(intervals[index])
                     count += increment
-                }, 20) // Adjust timing
+                }, 20)
             })
 
             return () => intervals.forEach(clearInterval)

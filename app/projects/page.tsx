@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default async function ProjectsPage() {
 
     const projects = await GetProjects();
-    // console.log(projects?.documents)
 
     const projectList: ProjectList[] = projects?.documents.map((doc) => ({
         $id: doc.$id,
@@ -29,11 +28,6 @@ export default async function ProjectsPage() {
         images: doc.images,
         beforeImage: doc.beforeImage,
         afterImage: doc.afterImage,
-        // $createdAt: doc.$createdAt,
-        // $updatedAt: doc.$updatedAt,
-        // $permissions: doc.$permissions,
-        // $databaseId: doc.$databaseId,
-        // $collectionId: doc.$collectionId,
     })) || [];
 
     return (
