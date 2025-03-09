@@ -366,7 +366,8 @@ export default function InteriorDesignQuestionnaire() {
     const currentQuestion = questions[currentQuestionIndex]
 
     return (
-        <div className="min-h-screen p-6 pt-40 bg-slate-300 text-black">
+        // <div className="min-h-screen p-6 pt-40 bg-[#EAE7DC] text-black">
+        <div className="min-h-screen p-6 pt-40 bg-gradient-to-b from-[#d6ccc2] via-[#e3d5ca] to-[#f5ebe0] text-black">
             <h1 className="text-black text-3xl font-semibold mb-12 text-center">Interior Design Questionnaire</h1>
             <div className="max-w-[570px] mx-auto">
                 <motion.div className="flex flex-col gap-6 overflow-visible" layout transition={transitionProps}>
@@ -477,7 +478,7 @@ export default function InteriorDesignQuestionnaire() {
                         <Button
                             onClick={handlePrevious}
                             disabled={currentQuestionIndex === 0}
-                            className="bg-gray-200 text-black px-4 py-2 rounded-md disabled:opacity-50"
+                            className=" text-black px-4 py-2 rounded-md disabled:opacity-50"
                             variant="outline"
                         >
                             Previous

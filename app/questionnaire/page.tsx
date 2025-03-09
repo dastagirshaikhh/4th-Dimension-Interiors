@@ -1,5 +1,5 @@
 import Footer from '@/components/footer'
-import InteriorDesignQuestionnaire from '@/components/interior-design-questionnaire'
+import InteriorDesignQuestionnaire from '@/components/questionnaire'
 import Navbar from '@/components/navbar'
 import React from 'react'
 
