@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Footer() {
     return (
@@ -14,17 +15,12 @@ export default function Footer() {
                         </h3>
                         <p className="text-white/70 mb-4">Your trusted Interior advisors, guiding you to your perfect home.</p>
                         <div className="flex space-x-4">
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                <Facebook className="h-5 w-5" />
-                            </Link>
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                <Twitter className="h-5 w-5" />
-                            </Link>
+
                             <Link href="https://www.instagram.com/azim_idricy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-white/70 hover:text-white transition-colors">
                                 <Instagram className="h-5 w-5" />
                             </Link>
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                <Linkedin className="h-5 w-5" />
+                            <Link href="https://wa.me/+918828086905" passHref target='_blank' className="text-white/70 hover:text-white transition-colors">
+                                <FaWhatsapp className="h-5 w-5" />
                             </Link>
                         </div>
                     </div>
@@ -33,7 +29,7 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li><Link href="/" className="text-white/70 hover:text-white transition-colors">Home</Link></li>
                             <li><Link href="/about" className="text-white/70 hover:text-white transition-colors">About Us</Link></li>
-                            <li><Link href="/properties" className="text-white/70 hover:text-white transition-colors">Properties</Link></li>
+                            <li><Link href="/projects" className="text-white/70 hover:text-white transition-colors">Projects</Link></li>
                             <li><Link href="/contact" className="text-white/70 hover:text-white transition-colors">Contact</Link></li>
                         </ul>
                     </div>
@@ -49,8 +45,8 @@ export default function Footer() {
                     <div>
                         <h3 className="text-xl font-bold mb-4">Contact Us</h3>
                         <p className="text-white/70 mb-2">Kharghar Navi Mumbai, Navi Mumbai (New Mumbai), India 410210</p>
-                        <p className="text-white/70 mb-2">Phone: +91 123 456 789</p>
-                        <p className="text-white/70 mb-2">Email: example@gmail.com</p>
+                        <p className="text-white/70 mb-2">Phone: +91 88280 86905</p>
+                        <p className="text-white/70 mb-2">Email: 4thdimension018@gmail.com</p>
                     </div>
                 </div>
                 <div className="border-t border-white/10 mt-12 pt-8 text-center">

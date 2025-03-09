@@ -81,10 +81,10 @@ import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 
 const stats: Statistic[] = [
-    { value: 100, label: 'Satisfied Customers' },
-    { value: 10, label: 'Years of Experience' },
-    { value: 7, label: 'States in Mumbai' },
-    { value: 250, label: 'Design Collections' },
+    { value: 100, label: 'Projects' },
+    { value: 5, label: 'Years of Expertise' },
+    { value: 10, label: 'Cities Around the Globe' },
+    { value: 250, label: 'Skilled Professionals' },
 ]
 
 export default function Stats() {

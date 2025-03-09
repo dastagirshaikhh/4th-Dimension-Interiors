@@ -206,13 +206,14 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                     </div>
                 </div>
                 <div className="mt-12 flex justify-center space-x-4">
-                    {projects.map((project) => (
+                    {projects.map((project, index) => (
                         <Button
                             key={project.$id}
                             variant={project.$id === activeProject.$id ? "default" : "outline"}
                             onClick={() => setActiveProject(project)}
                         >
-                            {project.title}
+                            {/* {project.title} */}
+                            Project {index + 1}
                         </Button>
                     ))}
                 </div>

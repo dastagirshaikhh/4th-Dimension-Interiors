@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { libreFranklin, jetbrainsMono } from '@/app/fonts'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const navItems = [
     { name: 'Home', href: '/' },
@@ -48,6 +49,7 @@ export default function Navbar() {
                             </span>
                         </span>
                         &nbsp;&nbsp;<span>Dimension</span><br />Interiors
+                        {/* <Image src="/logo.png" width={100} height={100} alt="logo" /> */}
                     </Link>
                     <div className="hidden md:flex space-x-8 items-center">
                         {navItems.map((item) => (
