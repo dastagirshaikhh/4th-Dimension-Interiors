@@ -7,7 +7,7 @@ import { GetProjects } from "../actions/appwrite"
 import { ProjectList } from "@/types"
 
 export const metadata: Metadata = {
-    title: "Our Projects | Modia Interiors",
+    title: "Our Projects | 4th Dimension Interiors",
     description: "Explore our portfolio of stunning interior design projects across residential and commercial spaces.",
 }
 
